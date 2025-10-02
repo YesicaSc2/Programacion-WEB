@@ -7,8 +7,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .events-section {
+            background-color: #1E2A3A;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .events-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .event-date {
+            background-color: #C41E1E;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            text-align: center;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+
+        .event-day {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .event-month {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .event-details h3 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .event-details p {
+            color: #d1d5db;
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -51,52 +109,45 @@
         </ul>
     </nav>
 
-     Carousel 
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner">
-                <div class="carousel-item">
-                    <h2>Bienvenidos al Centro MEMI</h2>
-                    <p>Centro de Excelencia en Matemáticas, Estadística y Métodos de Investigación de la Facultad de Ciencias y Tecnología</p>
+     Main Content 
+    <div class="main-content">
+        <seccion>
+            <img src="/images/taller.png" alt="yaller">
+        </seccion>
+        <seccion>
+            <img src="/images/curso ia.png" alt="curso">
+        </seccion>
+        
+        <section class="events-section">
+            <h2 class="events-title">Próximos Eventos</h2>
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">15</div>
+                        <div class="event-month">OCT</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Seminario de Investigación Científica</h3>
+                        <p>Auditorio Principal - 15:00 hrs</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <h2>Nuevos Cursos Disponibles</h2>
-                    <p>Inscríbete en nuestros seminarios y cursos especializados para el próximo semestre académico</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Investigación de Vanguardia</h2>
-                    <p>Conoce nuestras últimas publicaciones y proyectos de investigación en desarrollo</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>ICPC UMSS</h2>
-                    <p>Participa en las competencias de programación competitiva y representa a la universidad</p>
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">22</div>
+                        <div class="event-month">OCT</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Workshop de Programación Avanzada</h3>
+                        <p>Laboratorio 3 - 09:00 hrs</p>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-controls">
-                <button class="carousel-btn" onclick="prevSlide()">‹</button>
-                <button class="carousel-btn" onclick="nextSlide()">›</button>
-            </div>
-        </div>
-        <div class="carousel-indicators" id="indicators"></div>
+        </section>
     </div>
 
-     Main Content 
-    <main class="main-content">
-        <section id="mision">
-            <h2>Misión, Visión y Valores</h2>
-            <p>Contenido de la sección...</p>
-            <article>
-                <h3>
-
-                </h3>
-            </article>
-        </section>
-    </main>
-
-     Footer 
     <footer class="footer">
         <div class="footer-content">
-            <a href="mailto:memi@fcyt.umss.edu.bo" class="footer-link">
+            <a href="mailto:contacto@memi.fcyt.edu" class="footer-link">
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>

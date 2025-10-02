@@ -10,7 +10,7 @@
   --card: #f1f5f9;
   --primary: #1f2937;
   --primary-foreground: #ffffff;
-  --secondary: #8b5cf6;
+  --secondary: #3A8B7B;
   --secondary-foreground: #ffffff;
   --muted: #6b7280;
   --border: #e5e7eb;
@@ -242,6 +242,7 @@ h6 {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 2rem;
+  flex: 1;
 }
 
 /* Footer */
@@ -250,6 +251,7 @@ h6 {
   color: var(--primary-foreground);
   padding: 2rem;
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .footer-content {

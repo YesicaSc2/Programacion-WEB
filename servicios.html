@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="antecedentes.css">
 </head>
 <body>
     <header class="header">
@@ -51,64 +51,73 @@
         </ul>
     </nav>
 
-     Carousel 
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner">
-                <div class="carousel-item">
-                    <h2>Bienvenidos al Centro MEMI</h2>
-                    <p>Centro de Excelencia en Matemáticas, Estadística y Métodos de Investigación de la Facultad de Ciencias y Tecnología</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Nuevos Cursos Disponibles</h2>
-                    <p>Inscríbete en nuestros seminarios y cursos especializados para el próximo semestre académico</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>Investigación de Vanguardia</h2>
-                    <p>Conoce nuestras últimas publicaciones y proyectos de investigación en desarrollo</p>
-                </div>
-                <div class="carousel-item">
-                    <h2>ICPC UMSS</h2>
-                    <p>Participa en las competencias de programación competitiva y representa a la universidad</p>
-                </div>
+    <div>
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>
+                Los servicios que prestamos son:
+            </p>
+            <div class="section-text">
+                <h2 class="section-title">Cursos de formación para profesores de Colegio</h2>
+                <p class="section-content">
+                    Enseñando a enseñar en las áreas de Matemáticas y Computación, con un enfoque práctico y basado en las nuevas tecnologías de información y comunicación, respetando los lineamientos educativos para secundaria, pero con una proyección de utilidad para la transición de alumnos Colegio - Universidad.
+                </p>
             </div>
-            <div class="carousel-controls">
-                <button class="carousel-btn" onclick="prevSlide()">‹</button>
-                <button class="carousel-btn" onclick="nextSlide()">›</button>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2 class="section-title">Cursos de actualización para profesionales</h2>
+                <p class="section-content">
+                    Orientado a la actualización de profesionales egresados de las carreras de Matemáticas, Informática y Sistemas, además de otras carreras, en tecnologías informáticas emergentes o de tendencia. Todos los cursos con valor curricular para los participantes.
+                </p>
             </div>
-        </div>
-        <div class="carousel-indicators" id="indicators"></div>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2 class="section-title">Asesoramiento en la enseñanza de las Matemáticas y la Informática</h2>
+                <p class="section-content">
+                    Brindamos asesoramiento y seguimiento a profesores de secundaria y docentes universitarios de las áreas de Matemáticas e Informática en métodos, técnicas y herramientas pedagógicas que mejoren su práctica docente y el aprendizaje significativo de sus estudiantes.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2 class="section-title">Conferencias, seminarios especializados</h2>
+                <p class="section-content">
+                    Facilitamos nuestros ambientes e infraestructura para conferencias, seminarios, talleres, conversatorios con profesionales destacados locales o extranjeros, que quieran compartir sus experiencias y conocimientos con profesionales y estudiantes de nuestra universidad. Disponemos de dos salas con capacidad de 40 personas cada una, equipados con:  data display, pizarras, porta banderas, etc.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2 class="section-title">Alquiler de ambientes </h2>
+                <p class="section-content">
+                    Disponemos de dos ambientes cómodos para defensas públicas, cursos, seminarios, talleres, de carácter privado, con todo el equipamiento para el éxito de sus eventos.
+                </p>
+            </div>
+        </section> 
+        
     </div>
 
-     Main Content 
-    <main class="main-content">
-        <section id="mision">
-            <h2>Misión, Visión y Valores</h2>
-            <p>Contenido de la sección...</p>
-            <article>
-                <h3>
-
-                </h3>
-            </article>
-        </section>
-    </main>
-
-     Footer 
     <footer class="footer">
         <div class="footer-content">
-            <a href="mailto:memi@fcyt.umss.edu.bo" class="footer-link">
+            <a href="mailto:contacto@memi.fcyt.edu" class="footer-link">
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
                 Correo Electrónico
             </a>
-            <a href="https://facebook.com/memi.fcyt" target="_blank" class="footer-link">
+            <a href="https://www.facebook.com/memiumss" target="_blank" class="footer-link">
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
                 Facebook
             </a>
-            <a href="https://fcyt.umss.edu.bo" target="_blank" class="footer-link">
+            <a href="http://www.fcyt.umss.edu.bo" target="_blank" class="footer-link">
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
