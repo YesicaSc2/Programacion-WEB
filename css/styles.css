@@ -152,10 +152,11 @@ h6 {
   display: block;
 }
 
+
 /* Carousel */
 .carousel-container {
-  max-width: 1200px;
-  margin: 3rem auto;
+  width: 100%;
+  margin: 1rem auto;
   padding: 0 2rem;
   position: relative;
 }
@@ -165,7 +166,26 @@ h6 {
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
 }
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* sombra oscura sobre la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+}
+
 
 .carousel-inner {
   display: flex;
@@ -174,15 +194,22 @@ h6 {
 
 .carousel-item {
   min-width: 100%;
-  background-color: var(--card);
-  padding: 4rem 2rem;
+  position: relative;
   text-align: center;
 }
+
+.carousel-item img {
+  width: 100%;
+  height: 400px; /* Ajusta altura según necesites */
+  object-fit: cover; /* La imagen ocupa todo el contenedor sin deformarse */
+  border-radius: 0.5rem;
+}
+
 
 .carousel-item h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: #061d3d;
 }
 
 .carousel-item p {
@@ -190,6 +217,14 @@ h6 {
   color: var(--muted);
   max-width: 800px;
   margin: 0 auto;
+}
+.carousel-overlay p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #f0f0f0; /* gris muy claro */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* sombra ligera */
+  max-width: 750px;
+  margin: 0 auto 1rem;
 }
 
 .carousel-controls {
@@ -208,7 +243,7 @@ h6 {
   border: none;
   padding: 0.75rem 1rem;
   cursor: pointer;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   font-size: 1.25rem;
   transition: opacity 0.3s ease;
 }
@@ -245,13 +280,72 @@ h6 {
   flex: 1;
 }
 
-/* Footer */
+/* --- SOBRE MEMI (con imagen lateral) --- */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memi-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.section-text {
+  flex: 1;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1E2A3A;
+  margin-bottom: 1rem;
+  border-left: 4px solid #C41E1E;
+  padding-left: 0.75rem;
+}
+
+.section-content {
+  color: #4b5563;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* Responsive: imagen al lado del texto en pantallas grandes */
+@media (min-width: 768px) {
+  .content-section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .section-text {
+    text-align: left;
+  }
+}
+
 .footer {
   background-color: var(--primary);
   color: var(--primary-foreground);
   padding: 2rem;
   margin-top: 4rem;
   margin-bottom: 0;
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
 }
 
 .footer-content {
@@ -283,7 +377,6 @@ h6 {
   height: 24px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .header {
     flex-direction: row; 
