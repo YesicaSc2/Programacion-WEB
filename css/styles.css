@@ -51,8 +51,6 @@ h6 {
   object-fit: contain;
 }
 
-
-/* --- NAVIGATION --- */
 .navbar {
   background-color: #1E2A3A; 
   position: relative;
@@ -82,10 +80,9 @@ h6 {
 }
 
 .nav-link:hover {
-  color: #3A8B7B; /* hover verde */
+  color: #3A8B7B; 
 }
 
-/* Botón hamburguesa */
 .menu-toggle {
   display: none;
   background: none;
@@ -124,7 +121,6 @@ h6 {
 }
 
 
-/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -175,7 +171,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25); /* sombra oscura sobre la imagen */
+  background: rgba(0, 0, 0, 0.25); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,8 +196,8 @@ h6 {
 
 .carousel-item img {
   width: 100%;
-  height: 400px; /* Ajusta altura según necesites */
-  object-fit: cover; /* La imagen ocupa todo el contenedor sin deformarse */
+  height: 400px; 
+  object-fit: cover; 
   border-radius: 0.5rem;
 }
 
@@ -221,8 +217,8 @@ h6 {
 .carousel-overlay p {
   font-family: "DM Sans", sans-serif;
   font-size: 1.1rem;
-  color: #f0f0f0; /* gris muy claro */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* sombra ligera */
+  color: #f0f0f0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   max-width: 750px;
   margin: 0 auto 1rem;
 }
@@ -272,7 +268,6 @@ h6 {
   background-color: var(--secondary);
 }
 
-/* Main Content */
 .main-content {
   max-width: 1200px;
   margin: 3rem auto;
@@ -280,7 +275,6 @@ h6 {
   flex: 1;
 }
 
-/* --- SOBRE MEMI (con imagen lateral) --- */
 .content-section {
   display: flex;
   flex-direction: column;
@@ -325,7 +319,6 @@ h6 {
 }
 
 
-/* Responsive: imagen al lado del texto en pantallas grandes */
 @media (min-width: 768px) {
   .content-section {
     flex-direction: row;

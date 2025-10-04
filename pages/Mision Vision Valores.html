@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Page-specific styles */
         .content-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -63,21 +62,16 @@
         }
 
         .section-image {
-            background-color: #e5e7eb;
-            min-height: 200px;
+            flex: 1;
             display: flex;
-            align-items: center;
             justify-content: center;
-            border-radius: 0.5rem;
-            margin-top: 1rem;
+            align-items: center;
         }
 
         .section-image p {
             color: #9ca3af;
         }
 
-
-        /* Responsive design for desktop */
         @media (min-width: 768px) {
             .content-section {
                 flex-direction: row;
@@ -102,6 +96,54 @@
                 font-size: 1.75rem;
             }
         }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+
+        .values-grid li {
+            background: #f8f8f8;
+            border-radius: 15px;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 150px; 
+            height: 150px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .values-grid li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .values-grid img {
+            width: 60px; 
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .values-grid span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     </style>
 
 </head>
@@ -118,7 +160,7 @@
                 <a href="/index.html"class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
-                <a href="Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
+                <a href="/pages/Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
             </li>
             <li class="nav-item">
                 <a href="#acerca" class="nav-link">Acerca de</a>
@@ -146,10 +188,7 @@
         </ul>
     </nav>
 
-     Main Content 
-        <!-- Main Content -->
         <main class="content-container">
-            <!-- Section 1 -->
             <section class="content-section">
                 <div class="section-text">
                     <h2 class="section-title">Misión</h2>
@@ -158,11 +197,10 @@
                     </p>
                 </div>
                 <div class="section-image">
-                    <p>Imagen representativa</p>
+                    <img src="/images/Mats-1.jpg" alt="mision memi" class="memi-img">
                 </div>
             </section>
     
-            <!-- Section 2 -->
             <section class="content-section">
                 <div class="section-text">
                     <h2 class="section-title">Visión</h2>
@@ -171,91 +209,87 @@
                     </p>
                 </div>
                 <div class="section-image">
-                    <p>Imagen representativa</p>
+                    <img src="/images/vision.jpg" alt="vision memi" class="memi-img">
                 </div>
             </section>
     
-            <!-- Section 3 -->
             <section class="content-section">
                 <div class="section-text">
                     <h2 class="section-title">Valores</h2>
-                    <p class="section-content">
-                        <ul>
-                            <p class="section-content">
-                                Nuestros valores son: 
-                            </p>
-                            <li>
-                                Respeto
-                            </li>
-                            <li>
-                                Colaboración
-                            </li>
-                            <li>
-                                Compromiso
-                            </li>
-                            <li>
-                                Responsabilidad
-                            </li>
-                            <li>
-                                Confianza
-                            </li>
-                            <li>
-                                Trabajo en equipo
-                            </li>
-                            <li>
-                                Espíritu crítico
-                            </li>
-                            <li>
-                                Innovación
-                            </li>
-                            <li>
-                                Creatividad
-                            </li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="section-image">
-                    <p>Imagen representativa</p>
+                    <p class="section-content">Nuestros valores son:</p>
+                    <ul class="values-grid">
+                        <li>
+                            <img src="/images/el-respeto.png" alt="Respeto" class="icon">
+                            <span class="value">Respeto</span>
+                        </li>
+                        <li>
+                            <img src="/images/colaboracion.png" alt="Colaboración" class="icon">
+                            <span class="value">Colaboración</span>
+                        </li>
+                        <li>
+                            <img src="/images/compromiso.png" alt="Compromiso" class="icon">
+                            <span class="value">Compromiso</span>
+                        </li>
+                        <li>
+                            <img src="/images/responsabilidad.png" alt="Responsabilidad" class="icon">
+                            <span class="value">Responsabilidad</span>
+                        </li>
+                        <li>
+                            <img src="/images/confianza.png" alt="Confianza" class="icon">
+                            <span class="value">Confianza</span>
+                        </li>
+                        <li>
+                            <img src="/images/trabajo-en-equipo.png" alt="Trabajo en equipo" class="icon">
+                            <span class="value">Trabajo en equipo</span>
+                        </li>
+                        <li>
+                            <img src="/images/espiritu.jpg" alt="Espíritu crítico" class="icon">
+                            <span class="value">Espíritu crítico</span>
+                        </li>
+                        <li>
+                            <img src="/images/innovacion.png" alt="Innovación" class="icon">
+                            <span class="value">Innovación</span>
+                        </li>
+                        <li>
+                            <img src="/images/creatividad.png" alt="Creatividad" class="icon">
+                            <span class="value">Creatividad</span>
+                        </li>
+                    </ul>
+                    
                 </div>
             </section>
         </main>
-    
 
-    
-
-     Footer 
-    <footer class="footer">
-        <div class="footer-content">
-            <a href="mailto:contacto@memi.fcyt.edu" class="footer-link">
-                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-                Correo Electrónico
-            </a>
-            <a href="https://facebook.com/memi.fcyt" target="_blank" class="footer-link">
-                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-                Facebook
-            </a>
-            <a href="https://fcyt.umss.edu.bo" target="_blank" class="footer-link">
-                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                Web FCyT
-            </a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer-content">
+                <a href="https://mail.google.com/mail/?view=cm&to=memi@fcyt.umss.edu.bo" target="_blank" class="footer-link">          
+                    <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    Correo Electrónico
+                </a>
+                <a href="https://www.facebook.com/memiumss" target="_blank" class="footer-link">
+                    <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook
+                </a>
+                <a href="http://www.fcyt.umss.edu.bo/" target="_blank" class="footer-link">
+                    <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    Web FCyT
+                </a>
+            </div>
+        </footer>
 
     <script>
-        // Carousel functionality
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-item');
         const totalSlides = slides.length;
         const carouselInner = document.getElementById('carouselInner');
         const indicatorsContainer = document.getElementById('indicators');
 
-        // Create indicators
         for (let i = 0; i < totalSlides; i++) {
             const indicator = document.createElement('span');
             indicator.className = 'indicator';
@@ -267,7 +301,6 @@
         function updateCarousel() {
             carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Update indicators
             const indicators = document.querySelectorAll('.indicator');
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
@@ -289,10 +322,8 @@
             updateCarousel();
         }
 
-        // Auto-advance carousel every 5 seconds
         setInterval(nextSlide, 5000);
 
-        // Mobile menu toggle for dropdowns
         if (window.innerWidth <= 768) {
             document.querySelectorAll('.nav-item').forEach(item => {
                 const link = item.querySelector('.nav-link');
