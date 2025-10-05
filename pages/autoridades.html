@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/autoridades.css">
 </head>
 <body>
     <header class="header">
@@ -19,7 +20,7 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-menu" id="navMenu">
             <li class="nav-item">
-                <a href="index.html"class="nav-link">Inicio</a>
+                <a href="/index.html"class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
                 <a href="Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
@@ -50,20 +51,42 @@
         </ul>
     </nav>
 
-     Main Content 
-    <main class="main-content">
-        <section id="mision">
-            <h2>Misión, Visión y Valores</h2>
-            <p>Contenido de la sección...</p>
-            <article>
-                <h3>
-
-                </h3>
-            </article>
-        </section>
-    </main>
-
-     Footer 
+    <div class="autoridades-container">
+        <h1 class="page-title">Autoridades - Personal</h1>
+      
+        <div class="autoridades-grid">
+          <div class="autoridad-card">
+            <div class="autoridad-foto">
+              <img src="/images/director memi.png" alt="Director Centro MEMI" />
+            </div>
+            <div class="autoridad-info">
+              <h3 class="autoridad-nombre">Mgr. Kirt Rolando Jaldín Rosales</h3>
+              <p class="autoridad-cargo">Director Centro MEMI</p>
+            </div>
+          </div>
+      
+          <div class="autoridad-card">
+            <div class="autoridad-foto">
+              <img src="/images/coordinador de matematica.png" alt="Coordinador Área Matemática" />
+            </div>
+            <div class="autoridad-info">
+              <h3 class="autoridad-nombre">Mgr. Luis Roberto Zegarra Dorado</h3>
+              <p class="autoridad-cargo">Coordinador Área Matemática</p>
+            </div>
+          </div>
+      
+          <div class="autoridad-card">
+            <div class="autoridad-foto">
+              <img src="/images/coordinador de informatica.png" alt="Coordinador Área Informática" />
+            </div>
+            <div class="autoridad-info">
+              <h3 class="autoridad-nombre">Mgr. Jorge Orellana Araoz</h3>
+              <p class="autoridad-cargo">Coordinador Área Informática</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <footer class="footer">
         <div class="footer-content">
             <a href="mailto:contacto@memi.fcyt.edu" class="footer-link">
@@ -88,14 +111,12 @@
     </footer>
 
     <script>
-        // Carousel functionality
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-item');
         const totalSlides = slides.length;
         const carouselInner = document.getElementById('carouselInner');
         const indicatorsContainer = document.getElementById('indicators');
 
-        // Create indicators
         for (let i = 0; i < totalSlides; i++) {
             const indicator = document.createElement('span');
             indicator.className = 'indicator';
@@ -107,7 +128,6 @@
         function updateCarousel() {
             carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Update indicators
             const indicators = document.querySelectorAll('.indicator');
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
@@ -129,10 +149,8 @@
             updateCarousel();
         }
 
-        // Auto-advance carousel every 5 seconds
         setInterval(nextSlide, 5000);
 
-        // Mobile menu toggle for dropdowns
         if (window.innerWidth <= 768) {
             document.querySelectorAll('.nav-item').forEach(item => {
                 const link = item.querySelector('.nav-link');
