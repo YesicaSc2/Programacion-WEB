@@ -86,6 +86,24 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script>
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const link = item.querySelector('.nav-link');
+                const dropdown = item.querySelector('.dropdown-content');
+                
+                if (dropdown) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+        }
+
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("open");
+        }
+    </script>
 </body>
 </html>
