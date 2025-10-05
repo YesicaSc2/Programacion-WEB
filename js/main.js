@@ -1,4 +1,4 @@
-let currentSlide = 0;
+        let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-item');
         const totalSlides = slides.length;
         const carouselInner = document.getElementById('carouselInner');
@@ -53,5 +53,22 @@ let currentSlide = 0;
         }
 
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        
+            const menuToggle = document.querySelector(".menu-toggle");
+            menuToggle.classList.toggle("open");
         }
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href').split("/").pop();
+            if(linkPath === currentPath) {
+                link.classList.add('active');
+            }
+        });
+
+
+

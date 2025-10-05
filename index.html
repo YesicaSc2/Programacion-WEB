@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro MEMI </title>
+    <link rel="icon" type="memi" href="/images/icono-memi.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,12 +12,17 @@
 </head>
 <body>
     <header class="header">
-        <img src="/images/logoo.png" alt="Logo Centro MEMI" class="logo">
+        <img src="/images/icono-memi.png" alt="Logo Centro MEMI" class="logo">
+        <h1>Centro MEMI</h1>
         <img src="/images/Logo-Fcyt.jpg" alt="Logo FCyT" class="logo">
     </header>
 
     <nav class="navbar">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu" id="navMenu">
             <li class="nav-item">
                 <a href="index.html"class="nav-link">Inicio</a>
@@ -110,7 +116,6 @@
             </div>
         </section>
     </main>
-      
     <footer class="footer">
         <div class="footer-content">
             <a href="https://mail.google.com/mail/?view=cm&to=memi@fcyt.umss.edu.bo" target="_blank" class="footer-link">          

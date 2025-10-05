@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro MEMI </title>
+    <link rel="icon" type="memi" href="/images/icono-memi.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -103,15 +104,20 @@
 </head>
 <body>
     <header class="header">
-        <img src="/images/logoo.png" alt="Logo Centro MEMI" class="logo">
+        <img src="/images/icono-memi.png" alt="Logo Centro MEMI" class="logo">
+        <h1>Centro MEMI</h1>
         <img src="/images/Logo-Fcyt.jpg" alt="Logo FCyT" class="logo">
     </header>
 
     <nav class="navbar">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu" id="navMenu">
             <li class="nav-item">
-                <a href="index.html"class="nav-link">Inicio</a>
+                <a href="/index.html"class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
@@ -210,6 +216,38 @@
             </a>
         </div>
     </footer>
-    <script src="/js/main.js"></script>
+    <script>
+         if (window.innerWidth <= 768) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const link = item.querySelector('.nav-link');
+                const dropdown = item.querySelector('.dropdown-content');
+                
+                if (dropdown) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+        }
+
+        function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        
+            const menuToggle = document.querySelector(".menu-toggle");
+            menuToggle.classList.toggle("open");
+        }
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href').split("/").pop();
+            if(linkPath === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>

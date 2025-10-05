@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro MEMI </title>
+    <link rel="icon" type="memi" href="/images/icono-memi.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,41 +13,46 @@
 </head>
 <body>
     <header class="header">
-        <img src="/images/logoo.png" alt="Logo Centro MEMI" class="logo">
+        <img src="/images/icono-memi.png" alt="Logo Centro MEMI" class="logo">
+        <h1>Centro MEMI</h1>
         <img src="/images/Logo-Fcyt.jpg" alt="Logo FCyT" class="logo">
     </header>
 
     <nav class="navbar">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu" id="navMenu">
             <li class="nav-item">
-                <a href="index.html"class="nav-link">Inicio</a>
+                <a href="/index.html"class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
-                <a href="Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
+                <a href="/pages/Mision Vision Valores.html" class="nav-link">Misión Visión Valores</a>
             </li>
             <li class="nav-item">
                 <a href="#acerca" class="nav-link">Acerca de</a>
                 <div class="dropdown-content">
-                    <a href="antecedentes.html">Antecedentes</a>
-                    <a href="datos historicos.html">Datos históricos</a>
-                    <a href="autoridades.html">Autoridades</a>
+                    <a href="/pages/antecedentes.html">Antecedentes</a>
+                    <a href="/pages/datos historicos.html">Datos históricos</a>
+                    <a href="/pages/autoridades.html">Autoridades</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="cursos-seminarios.html" class="nav-link">Cursos / Seminarios</a>
+                <a href="/pages/cursos-seminarios.html" class="nav-link">Cursos / Seminarios</a>
             </li>
             <li class="nav-item">
-                <a href="publicaciones.html" class="nav-link">Publicaciones</a>
+                <a href="/pages/publicaciones.html" class="nav-link">Publicaciones</a>
             </li>
             <li class="nav-item">
-                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="/pages/servicios.html" class="nav-link">Servicios</a>
             </li>
             <li class="nav-item">
-                <a href="icpc.html" class="nav-link">ICPC UMSS</a>
+                <a href="/pages/icpc.html" class="nav-link">ICPC UMSS</a>
             </li>
             <li class="nav-item">
-                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="/pages/contacto.html" class="nav-link">Contacto</a>
             </li>
         </ul>
     </nav>
@@ -100,7 +106,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="mailto:contacto@memi.fcyt.edu" class="footer-link">
+            <a href="https://mail.google.com/mail/?view=cm&to=memi@fcyt.umss.edu.bo" target="_blank" class="footer-link">          
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
@@ -112,7 +118,7 @@
                 </svg>
                 Facebook
             </a>
-            <a href="http://www.fcyt.umss.edu.bo" target="_blank" class="footer-link">
+            <a href="http://www.fcyt.umss.edu.bo/" target="_blank" class="footer-link">
                 <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
@@ -120,53 +126,7 @@
             </a>
         </div>
     </footer>
-
     <script>
-        // Carousel functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-item');
-        const totalSlides = slides.length;
-        const carouselInner = document.getElementById('carouselInner');
-        const indicatorsContainer = document.getElementById('indicators');
-
-        // Create indicators
-        for (let i = 0; i < totalSlides; i++) {
-            const indicator = document.createElement('span');
-            indicator.className = 'indicator';
-            if (i === 0) indicator.classList.add('active');
-            indicator.onclick = () => goToSlide(i);
-            indicatorsContainer.appendChild(indicator);
-        }
-
-        function updateCarousel() {
-            carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Update indicators
-            const indicators = document.querySelectorAll('.indicator');
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
-
-        // Auto-advance carousel every 5 seconds
-        setInterval(nextSlide, 5000);
-
-        // Mobile menu toggle for dropdowns
         if (window.innerWidth <= 768) {
             document.querySelectorAll('.nav-item').forEach(item => {
                 const link = item.querySelector('.nav-link');
@@ -182,8 +142,23 @@
         }
 
         function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("open");
+            const navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open");
+        
+            const menuToggle = document.querySelector(".menu-toggle");
+            menuToggle.classList.toggle("open");
         }
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href').split("/").pop();
+            if(linkPath === currentPath) {
+                link.classList.add('active');
+            }
+        });
+        
     </script>
 </body>
 </html>

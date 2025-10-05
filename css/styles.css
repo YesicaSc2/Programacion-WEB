@@ -35,7 +35,6 @@ h6 {
   font-weight: 700;
 }
 
-/* Header */
 .header {
   background-color: var(--background);
   border-bottom: 2px solid var(--border);
@@ -58,6 +57,8 @@ h6 {
 }
 
 .nav-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   list-style: none;
   display: flex;
   gap: 1.5rem;
@@ -79,17 +80,43 @@ h6 {
   transition: color 0.3s ease;
 }
 
+.nav-link.active {
+  color: var(--secondary);
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary);
+}
+
+
 .nav-link:hover {
-  color: #3A8B7B; 
+  color: #3A8B7B;  
 }
 
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  color: #fff;
-  font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 

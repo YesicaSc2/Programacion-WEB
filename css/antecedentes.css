@@ -39,7 +39,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     #antecedentes {
       padding: 2rem 1rem;
