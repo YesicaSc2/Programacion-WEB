@@ -110,35 +110,42 @@
         }
 
         .values-grid li {
-            background: #f8f8f8;
-            border-radius: 15px;
+            background: linear-gradient(145deg, #c3f2ec, #a0e0d6);
+            border-radius: 20px;
             text-align: center;
-            padding: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            width: 150px;
-            height: 150px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            width: 180px;
+            height: 120px;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            text-overflow: ellipsis;
+
         }
 
         .values-grid li:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        .values-grid img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            background: linear-gradient(145deg, #aaf0e5, #8ad7ca);
         }
 
         .values-grid span {
-            font-weight: 600;
-            color: #333;
+            font-weight: 700;
+            color: #1E2A3A;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            font-family: 'Arial', sans-serif;
+            display: block;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
         }
 
         @media (max-width: 1024px) {
@@ -153,7 +160,7 @@
             }
 
             .values-grid li {
-                width: 120px;
+                width: 160px;
                 height: 120px;
             }
 
@@ -276,39 +283,30 @@
                     <p class="section-content">Nuestros valores son:</p>
                     <ul class="values-grid">
                         <li>
-                            <img src="/images/el-respeto .png" alt="Respeto" class="icon">
                             <span class="value">Respeto</span>
                         </li>
                         <li>
-                            <img src="/images/colaboracion.png" alt="Colaboración" class="icon">
                             <span class="value">Colaboración</span>
                         </li>
                         <li>
-                            <img src="/images/compromiso.png" alt="Compromiso" class="icon">
                             <span class="value">Compromiso</span>
                         </li>
                         <li>
-                            <img src="/images/responsabilidad .png" alt="Responsabilidad" class="icon">
                             <span class="value">Responsabilidad</span>
                         </li>
                         <li>
-                            <img src="/images/confianza.png" alt="Confianza" class="icon">
                             <span class="value">Confianza</span>
                         </li>
                         <li>
-                            <img src="/images/trabajo-en-equipo .png" alt="Trabajo en equipo" class="icon">
                             <span class="value">Trabajo en equipo</span>
                         </li>
                         <li>
-                            <img src="/images/espiritu.jpg" alt="Espíritu crítico" class="icon">
                             <span class="value">Espíritu crítico</span>
                         </li>
                         <li>
-                            <img src="/images/innovacion .png" alt="Innovación" class="icon">
                             <span class="value">Innovación</span>
                         </li>
                         <li>
-                            <img src="/images/creatividad.png" alt="Creatividad" class="icon">
                             <span class="value">Creatividad</span>
                         </li>
                     </ul>
